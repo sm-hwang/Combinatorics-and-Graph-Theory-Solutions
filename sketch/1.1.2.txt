@@ -6,4 +6,44 @@
 
 4. If no such path exists, the two odd vertices are on separate connected components A and B. Consider A by itself, it is a connected graph, but it has an odd number of vertice with odd degree, contradiction.
 
-5. Consider the following algorithm 
+5. a) Consider the following algorithm 
+Pick random v \in G
+i = 0
+Mark v as i, 
+randomly pick a vertex adjacent to v that isn't marked by a number yet, and go there (v = adj v)
+i += 1
+Stop if every adjacent vertex to v has been marked 
+
+Once this algorithm ends, we have a path marked 0, 1, ..., i, but since minimum degree is k, and all adj vertices of v have been marked, there are at least k + 1 vertices in the path, which is a path of length k
+
+b) Do the same as above, but connect the last vertex to an adj vertex with minimum marking. since the path from lowest i to end vertex is k long, the cycle created is at least k+1
+
+6. Induct on the length of the walk 
+
+7. Drawn 
+
+8. Suppose they didn't share a vertex. Since G is conneced, exists a path from v1 to uv. Let vi be the last vetex in P3 also in P1 and uj last vetex in P3 also in P2. 
+This path is longer than P1 and P2, a contradiction
+
+9. (n-1)C2 ?
+
+10. Inductio on n, prove that minimum edges needed to have a connected graph is n - 1 (tree). 
+
+11. => Suppose e is a birdgeo f G. (consider G-e we show no path exists from u to v, not connected so no cycle)
+<= Suppose e is not a bridge. the G - e is still connected, i.e. thereexists path from uv = e u to v, this path + e s a cycle 
+
+12. a) Can have no bridges and more than one cycle (consider calculator 8)
+b) Same as if G has a bridge ethen G has a cut vertex. Suppose G has bridge av. A is a cut vertex since deleting u deletes bridge av, thus must result in more connected components
+c) False, consider hourglass looking graph n = 5
+
+Lemma: Let G be connected. e = uv \in G is an edge <=> no  u-v path exists in G-e 
+13. redirection. Supose every v in G in cycle, delete v, any path using v can be rerouted.   
+
+14. Suppose G has no cycle and is connected. Consider v \in V s.t. deg(v) > 1, and x, y s.t. vx, yv \in E. Graph G - v is disconnected since no path exists from x to y. if there was, would be a cycle in G. if order = 2, couldnt' have cycle 
+
+15. a) done
+b) #written down
+
+16. b)
+*-* *-*
+a) Suppose G wasn't connected, must have more than 1 connected component, and one of them has <= vertices, which implies minimum degree is less than n-1/2 
