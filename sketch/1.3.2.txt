@@ -1,0 +1,27 @@
+1. Easy
+
+2. even number of edges => odd number of vertices, if all degrees are odd, then sum of odd number for odd times is odd, which is a contradiction (SUM deg = 2|E|)
+
+3. delete vertex with max degree, we now have a forest. 
+each connected component has at least two leaves, or is a single node. If single node, was leaf before, and at most one of the two leaves were produced by deletion.
+
+4. Thm 11
+
+5. => G is tree. Suppose more than one path from u to v. in the two paths, these two pathes make a cycle
+<= Suppose exactly one path, then connected. If there was a cycle, there would be at least two paths.
+
+6. => Suppose T. by def contains no cycles. consider T + e, e = uv. u-v path exists in T, so with e is a cycle. Suppose more than one cycle in T + e. Cycle must contain e, since its introduction caused it , so two different u-v path must exist, so T has cycle, contradiction
+<= Suppose T no cycles, any new edge introduces one new cycle. If any e=uv introduces a cycle, then u-v path exists already, so T connected and doesn't have cycles by assumption, a tree.  
+
+7. Suppose not, uv not bridge then G -uv has path from u to v, combined with uv is a cycle.
+
+8. Use 7. or show cycle would exist otherwise
+
+9. freelo
+
+10. Do it by induction
+
+11. n = 2/(2- a)
+
+12. Suppose no pair of leaves has sa common neighbor. Let k be number of nodes that neighbour a leaf then
+SUm deg(v) >= k (leaf) + (3 * k) (leaf neighbour) + 2 (n - 2k) = 2n, contradiciton.

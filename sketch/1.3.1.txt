@@ -1,0 +1,3 @@
+3. Tree has no cycles, so has no odd cycles and thus is a bipartite graph. 
+
+4. easy, draw the example 

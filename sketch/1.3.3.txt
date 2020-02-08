@@ -1,0 +1,14 @@
+1. G is connected, label all graphs with weight 1 and run Kruskals. Since Kruskals guarantees a minimum spanning tree, this is a spanning tree. 
+
+2. => Supp G is tree. connected by definition, and G contains all its vertices (connected) so is spanning tree.
+<= We show the Graph is the spanning tree (so unique). if not, then can't be becauseo f extra vertex (connected),
+so must be extra edge so must have extra edges (cycle). delete edge in edge in such a C not in T, show this is a different spanning tree.
+
+3. [Contradiction] Let T span G. Suppose |T doesn't contain any edges in C, then T contains C, so T has cycle, contradiction. 
+
+4. 
+=> [Contra] Supp thereexists spanning T s.t. e \notin T. T spans subgraph G - e, there exists a path from u to v (e = uv) in T, so G not disconnected, e is not bridge.
+<= Supp e not bridge. Then G - e is connected, G - e has spanning tree T, this is a spanning tree of G that doesn't contain e. 
+
+5. a) give two examples 
+b) has unique edge weights

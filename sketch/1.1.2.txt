@@ -1,0 +1,9 @@
+1. Maximum number of edges given constraints (no loops, no parallel edges) is a complete graph K_n, so nC2 = n(n-1)/2
+
+2. Suppose otherwise. We know there are even number of odd degrees, since SUM deg = 2 |E|. So there can be no odd degree vertices, since otherwise we would have duplicates. But the max degree of a graph is n-1 (connected to every other vertex), so degree is between 0 and n-1, not enough numbers to cover n things without odd numbers, contradiction. 
+
+3. 
+
+4. If no such path exists, the two odd vertices are on separate connected components A and B. Consider A by itself, it is a connected graph, but it has an odd number of vertice with odd degree, contradiction.
+
+5. Consider the following algorithm 

@@ -1,0 +1,14 @@
+1. sequence records neighbor of smallest leaf and deletes, only way for leaf to be recorded if its neighbour of smallest leaf left, but then its K2 and algo stops
+
+ALl but two vertices disappear, for v to disappers it needs to become leaf, all but one adj must get removed, when they do recorded each time. 
+If v doesn't disappear, vertex of k2 at the end of algo. 
+
+4. Stars 
+
+5. Paths 
+
+6. K_n contains nC2 edges, each tree contains n -1 edges, so each edge belongs to (n-1)/nC2 = 2/n trees, so 1 - 2/n trees don't contain the edge, (n - 2)/n n^(n - 2) don't contain e.
+
+7. Use Matrix Tree Theorem to prove Cayley's THeorem. 
+
+
