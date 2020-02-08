@@ -1,0 +1,26 @@
+1.
+
+2. 
+
+3. 
+
+4. Counting based on what a triangle is .
+
+5. 0, walk of odd length, but the direct length between (1,5) is even
+
+6. a) Suppose ksi the smallest pos integer s.t. all entries of at least one row of S_r are postiive
+From 1), we know that for the row with all pos entries, (say j), r = ec(v_j) Since itwa s the smallest pos int s.t. we have ecc(v_j) = r <= ecc(v_i) \forall i, thus is a min, aka rad(G)
+b) Let m smallest pos int s.t. _____________
+considering s_{m-1}, not all rows have all pos, i s.t. {i | row i has no 0 in s_{m-1}. max{ecc(v_i) | row i has no 0 in s_{m-1}} < ecc(v_j)
+
+7.
+S = [0] # zero matrix (n by n)
+k = 0
+while everyrow has a 0:
+    s += A^k
+    k += 1
+return r where [A]_r has no zeros
+
+8. 
+
+9. 
