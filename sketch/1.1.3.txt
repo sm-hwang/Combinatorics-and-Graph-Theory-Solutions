@@ -1,0 +1,21 @@
+1. nC2
+
+2. [contrapositive] Suppose r1 != r2, and |X| =r1 and |Y| = r2. then x \in X, deg(x) = r2 and y \in Y, deg(y) = r1 but r2 != r1. 
+
+3. No, no matter which 4 vertices you choose 2 of them will be in the same subset, so no edges between them.
+
+4. No.
+
+5. 
+
+6. order = \sum_{i=1}^{k} r_i
+   size = \sum_{i=1}^{k} (n - r_i)r_i / 2 
+
+7. 
+
+8. Suppose G and H are isomorphic. \exists a bijection from V(G) -> V(H) s.t. xy \in E(G) <=> f(x)f(y) \in E(H)
+    xy \in E(^G) <=> xy \notin E(G) <=> f(x)f(y) \notin E(H) <=> f(x)f(y) \in E(^H)
+
+9. follow the vertex with degree 1
+
+10. look at the cycles  
