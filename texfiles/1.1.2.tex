@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, enumerate, mathtools, dsfont, MnSymbol}
+
+\begin{document}
+
+
+{\bfseries Section 1.1.2}
+
+\begin{enumerate}[1]
+    \item %1 
+        Graph $G$ of order $n$ with maximal number of edges if the complete graph
+        $K_n$, which has $\binom{n}{2} = \frac{n(n-1)}{2}$ edges.
+    \item %2
+        To show a contradiction, suppose otherwise. We know there are an even 
+        number of odd degree vertices, implying that there can be no odd 
+        degree vertices. But the max degree of a graph is n-1 (connected to 
+        every other vertex), so the degree is between 0 and n-1. Excluding 
+        the odd degrees, there are not enough unique numbers to cover all the
+        vertices.
+    \item %3 
+        For later.
+    \item %4  
+        If no such path exists, the two odd vertics are on separate connected 
+        components A and B. Consider A by itself, it is a connected graph, 
+        but it has an odd number of vertices with an odd degree, a contradiction
+        . 
+    \item %5
+        \begin{enumerate}[a)]
+            \item 
+                
+            \item 
+        \end{enumerate}
+    \item %6
+        We prove this by induction on the length of the odd closed walk. 
+
+        Base Case: The length 3 odd closed walk is just a length 3 cycle.
+
+        Suppose odd closed walks with lengths up to 2n - 1 contain odd cycles.
+        Let $W$ = $v_1$, $v_2$, ..., $v_{2n+1} = v_1$ be a length $2n+1$ closed walk. 
+        If no vertices in the walk repeat, then we are done, the odd walk is an
+        odd cycle. Otherwise, let $l$ be the smallest number not $1$ such that $v_l$ 
+        repeats, and let $v_l = v_k$ where $l < k$. Then we have two closed walks 
+        in $W$, $v_1$, ..., $v_l = v_k$, ..., $v_{2n+1} = v_1$ and $v_l$, ..., 
+        $v_k = v_l$. The lengths of these two walks must add up to $2n+1$, thus one
+        of them must be an odd length closed walk, which by the inductive hypothesis
+        must contain an odd length cycle. 
+
+
+    \item %7
+
+    \item %8
+        
+
+    \item %9
+
+    \item %10
+
+    \item %11
+        $\rightarrow$ Suppose $e = uv$ is a bridge of $G$ and consider $G-e$. Since
+        $e$ is a bridge, $G-e$ is disconnected, i.e. no $uv$ path exists in $G-e$,
+        implying that $e$ is not part of any cycle in $G$. 
+
+
+        $\leftarrow$ Suppose $e = uv$ is not a bridge. Then $G - e$ is still connected, 
+        i.e. there exists a $uv$ path. This path $+ e$ is a cycle.
+
+    \item %12
+        \begin{enumerate}[a)]
+            \item 
+            \item 
+            \item
+        \end{enumerate}
+
+    \item %13
+
+
+    \item %14
+        Suppose $G$ has no cycles and is connected. Consider $v \in V$ such that 
+        $deg(v) > 1$ and $x,y \in N(v)$. Graph $G - \{v\}$ is disconnected since 
+        no $xy$ path exists since if there was, this path in addition to 
+        path $x$, $v$, $y$ would form a cycle in $G$. If $order = 2$, the graph does 
+        not have a cycle. 
+    \item %16
+
+
+\end{enumerate}
+\end{document}
