@@ -1,0 +1,53 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, enumerate, mathtools, dsfont, MnSymbol}
+
+\begin{document}
+
+
+{\bfseries Section 1.2.2}
+
+\begin{enumerate}[1]
+    \item %1 
+        We have an edge for every distinct pairs of vertices, so
+        $\binom{n}{2} = \frac{n(n-1)}{2}$.
+    \item %2
+        We prove the contrapositive. Suppose $r_1 \neq r_2$, $|X| = r_1$ and 
+        $|Y| = r_2$. Then for $x \in X$, $deg(x) = r2$ and for $y \in Y$ 
+        $deg(y) = r1$, but $r2 \neq r1$, so $K_{r_1, r_2}$ is not regular.
+    \item %3 
+        No, no matter which $4$ vertices you choose, $2$ of them will be in the 
+        same subset, and would have no edges between them. 
+    \item %4  
+        \begin{enumerate}[a)]
+            \item
+                $[A^3]_{j,j}$ equals the number of length $3$ walks from $v_j$ to 
+                itself. Length $3$ closed walks form a triangle that contains 
+                $v_j$, but the walk $v_j$, $v_x$, $v_y$, $v_j$ and 
+                $v_j$, $v_y$, $v_x$, $v_j$ are both counted. These two walks form the 
+                same triangle, so we must divide the entry by two. 
+            \item
+                a) implies that $\frac{1}{2}\text{Tr}(A^3)$ equals the number of 
+                triangles that contains $v_1$ or $v_2$ or ... or $v_n$. However 
+                every triangle consists of three vertices, so we are counting 
+                every triangle 3 times. Thus the number of unique triangles is 
+                $\frac{1}{6}\text{Tr}(A^3)$.
+        \end{enumerate}
+    \item %5
+
+    \item %6
+        \begin{enumerate}[a)]
+            \item
+        \end{enumerate}
+
+    \item %7
+
+    \item %8
+        We prove the contrapositive. Suppose $G$ was not complete. $\exists v_i,v_j 
+        \in V(G)$ such that $uv \notin E(G)$, meaning $A_{i,j} = 0$. If there exists
+        a $v_iv_j$ path, then $D_{i, j} > 0$. Otherwise, $D_{i, j} = \inf$. In either
+        case, $D_{i, j} \neq 0$, thus $A \neq D$. 
+
+    \item %9
+        
+\end{enumerate}
+\end{document}

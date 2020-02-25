@@ -8,8 +8,8 @@
 
 \begin{enumerate}[1]
     \item %1 
-        Graph $G$ of order $n$ with maximal number of edges if the complete graph
-        $K_n$, which has $\binom{n}{2} = \frac{n(n-1)}{2}$ edges.
+        graph $g$ of order $n$ with maximal number of edges if the complete graph
+        $k_n$, which has $\binom{n}{2} = \frac{n(n-1)}{2}$ edges.
     \item %2
         To show a contradiction, suppose otherwise. We know there are an even 
         number of odd degree vertices, implying that there can be no odd 
@@ -52,16 +52,28 @@
         
 
     \item %9
+        My guess is that it is a complete graph $K_n$ with every edge to a single 
+        vertex missing, which has $\binom{n-1}{2} = \frac{(n-2)(n-1)}{2}$
 
     \item %10
+        (Not sure whether this proof is legitimate/rigorous).
+
+        Using induction we prove the the minimum number of edges needed to have 
+        a connected graph is $n - 1$ (a tree). 
+
+        Base Case: $K_1$ has $0$ edges (certainly the minimum number), and is connected.
+
+        Suppose $G$ of order $n$ requires minimum ${n - 1}$ edges to be connected.
+        Consider such a connected graph with $n - 1$ edges, and consider $G + {v}$,
+        $G$ with an additional vertex. If we add no edges, 
 
     \item %11
-        $\rightarrow$ Suppose $e = uv$ is a bridge of $G$ and consider $G-e$. Since
+        $\Rightarrow$ Suppose $e = uv$ is a bridge of $G$ and consider $G-e$. Since
         $e$ is a bridge, $G-e$ is disconnected, i.e. no $uv$ path exists in $G-e$,
         implying that $e$ is not part of any cycle in $G$. 
 
 
-        $\leftarrow$ Suppose $e = uv$ is not a bridge. Then $G - e$ is still connected, 
+        $\Leftarrow$ Suppose $e = uv$ is not a bridge. Then $G - e$ is still connected, 
         i.e. there exists a $uv$ path. This path $+ e$ is a cycle.
 
     \item %12
@@ -72,7 +84,7 @@
         \end{enumerate}
 
     \item %13
-
+        
 
     \item %14
         Suppose $G$ has no cycles and is connected. Consider $v \in V$ such that 
