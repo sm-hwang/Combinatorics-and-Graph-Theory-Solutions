@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1583026084 "1.1.2.tex" "1.1.2.pdf" "1.1.2" 1583026085
+["pdflatex"] 1583033147 "1.1.2.tex" "1.1.2.pdf" "1.1.2" 1583033148
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc" 1480098668 3341 78e600b269762aa2a25a5293cc4535c0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc" 1480098668 3275 8d7166dfdbc31ffdc8aba0c31b3bd5c8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc" 1480098668 3375 808c88761dbdc66fc653d18f42765b64 ""
@@ -42,6 +42,7 @@
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1480098733 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1480098733 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb" 1480098742 230551 5ba6b427b352fee1ec24cb4d22d70733 ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol6.pfb" 1480098742 228561 f013e042f586e685f4f490b0a6ea8e0a ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol8.pfb" 1480098742 228273 1b9652077d8f9fdc99f210b93860040b ""
   "/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1480098806 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty" 1480098815 7612 729a8cc22a1ee0029997c7f74717ae05 ""
@@ -155,8 +156,8 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "1.1.2.aux" 1583026085 104 30f703604930669ff23745127e782d43 ""
-  "1.1.2.tex" 1583026084 9051 0fc5513d8710271a1b50fded7907499a ""
+  "1.1.2.aux" 1583033148 104 30f703604930669ff23745127e782d43 ""
+  "1.1.2.tex" 1583033146 11090 fea78f1d5dd2c0a1708b7829ddab462f ""
   (generated)
   "1.1.2.aux"
   "1.1.2.pdf"

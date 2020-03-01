@@ -95,15 +95,23 @@
 
 
     \item %8
-         
+        Let $P_1 = v_1, v_2, ..., v_n$ and $P_2 = u_1, u_2, ..., u_n$. Since the graph is
+        connected, there exists a path $P_c = w_1 (= u_1), ..., w_m (= v_1)$ between 
+        $u_1$ and $v_1$. Consider $v_i = w_{i'}$ where $i'$ is the lowest index such that
+        $w_{i'} \in P_2$, and $w_{j'} = u_j$ where $j'$ is the largest index such that
+        $j < i$ and $w_{j'} \in P_1$. Notice that once excluding the first and last vertices, 
+        the path $w_{j'}, ..., w_{i'}$ does not contain vertices in $P_1$ and $P_2$. Let
+        $P_{1-max}$ the larger of $v_1, ..., v_i$ and $v_i, ..., v_n$, likewise 
+        $P_{2-max}$ the larger of $u_1, ..., u_j$ and $u_j, ..., u_n$. Since for
+        $n = k_1 + k_2 = p_1 + p_2$, we have $n \leq max(k_1, k_2) + max(p_1, p_2)$, the 
+        path $P_{1-max} + P_{2-max} + v_i, ..., v_j$ is longer than $P_1$ and $P_2$, which
+        is a contradiction.
 
     \item %9
         My guess is that it is a complete graph $K_n$ with every edge to a single 
         vertex missing, which has $\binom{n-1}{2} = \frac{(n-2)(n-1)}{2}$ edges. 
 
     \item %10
-        (Not sure whether this proof is legitimate/rigorous).
-
         Using induction we prove the the minimum number of edges needed to have 
         a connected graph is $n - 1$ (a tree). 
 
@@ -111,7 +119,10 @@
 
         Suppose $G$ of order $n$ requires minimum ${n - 1}$ edges to be connected.
         Consider such a connected graph with $n - 1$ edges, and consider $G + {v}$,
-        $G$ with an additional vertex. If we add no edges, 
+        $G$ with an additional vertex. If we add no edges, then the new graph is 
+        disconnected, so we must add one edge. Since $G$ is connected by the inductive
+        hypothesis, adding an edge between any $u \in G$ and $v$ will make $G + {v}$ 
+        connected, since for $ux$ path where $x \in G$, the path $+v$ is $vx$ path.
 
     \item %11
         $\Rightarrow$ Suppose $e = uv$ is a bridge of $G$ and consider $G-e$. Since
@@ -175,8 +186,9 @@
         \end{enumerate}
 
     \item %13
-        
-
+        Consider the graph shown in 12a. It is connected, and every vertex is part of 
+        one cycle, but is not 2-connected since deleting $A$ create more connected 
+        components.
     \item %14
         Suppose $G$ has no cycles and is connected. Consider $v \in V$ such that 
         $deg(v) > 1$ and $x,y \in N(v)$. Graph $G - \{v\}$ is disconnected since 
@@ -189,7 +201,17 @@
                 Consider $v \in G$ such that $\delta(G) = |N(v)|$. Then 
                 $G - N(v)$ is a disconnected graph, thus $\kappa(G) \leq \delta(G)$.
             \item
-                
+                For $\delta(G) = n - 1$, this is true by definition. \newline
+                Suppose $\delta(G) = n - 2$. Observe that every vertex is 
+                connected to at least all but one other vertex in the graph.
+                We want to show that deleting any $n-3$ nodes of $G$ still results
+                in a connected graph. Consider $G$ with any $n-3$ nodes deleted, 
+                we refer to the remaining three as $0, 1, 2$. Since $\delta(G) =
+                n - 2$, $0$ is connected to at least one other node, say $1$. By
+                the same reasoning, $2$ must be connected to at least one other 
+                node, which has to be either $0$ or $1$. in either case, $0$, $1$
+                and $2$ are connected. 
+
         \end{enumerate}
 
     \item %16
