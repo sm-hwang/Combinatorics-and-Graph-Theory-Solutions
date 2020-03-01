@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
-\usepackage{amsmath, amssymb, enumerate, mathtools, dsfont, MnSymbol}
-
+\usepackage{amsmath, amssymb, enumerate, mathtools, dsfont, MnSymbol, tikz}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
 \begin{document}
 
 
@@ -37,9 +38,31 @@
     \item %6
         \begin{enumerate}[a)]
             \item
+                Let $i$ be the row with all positive entries in $S_r$. 
+                From 1. of Theorem 1.9, we know $ecc(v_i) = r$. Since for $a < r$,
+                no row had all positive entries, none of the eccentricity for other
+                vertices in $G$ are less than $r$, so $r$ is the smallest 
+                eccentricity, the radius of $G$. 
+            \item
+                Let $i$ be the row with all positive entries in $S_m$, but not in
+                $S_{m - 1}$. From 1. of Theorem 1.9, $ecc(v_i) = m$, and since 
+                $S_{m-1}$ contained zeros, all other eccentricities are $ \leq m$,
+                thus $diam(G) = m$. 
         \end{enumerate}
 
     \item %7
+        \begin{algorithm}
+            \caption{Finding center of graph}
+        \begin{algorithmic}[1]
+            \State S = $[0]$, n by n zero matrix
+            \State k = 0
+            \While{everyrow of $S$ has a $0$}
+            \State S += $A^k$
+            \State k += $1$
+            \EndWhile
+            \State return k 
+        \end{algorithmic}
+        \end{algorithm}
 
     \item %8
         We prove the contrapositive. Suppose $G$ was not complete. $\exists v_i,v_j 
@@ -47,7 +70,6 @@
         a $v_iv_j$ path, then $D_{i, j} > 0$. Otherwise, $D_{i, j} = \inf$. In either
         case, $D_{i, j} \neq 0$, thus $A \neq D$. 
 
-    \item %9
         
 \end{enumerate}
 \end{document}
