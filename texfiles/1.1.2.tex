@@ -1,12 +1,14 @@
 \documentclass[11pt]{article}
-\usepackage{amsmath, amssymb, enumerate, mathtools, dsfont, MnSymbol}
+\usepackage{amsmath, amssymb, enumerate, mathtools, dsfont, MnSymbol, tikz}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
 
 \begin{document}
 
 
 {\bfseries Section 1.1.2}
 
-\begin{enumerate}[1]
+\begin{enumerate}[1.]
     \item %1 
         graph $g$ of order $n$ with maximal number of edges if the complete graph
         $k_n$, which has $\binom{n}{2} = \frac{n(n-1)}{2}$ edges.
@@ -17,18 +19,38 @@
         every other vertex), so the degree is between 0 and n-1. Excluding 
         the odd degrees, there are not enough unique numbers to cover all the
         vertices.
-    \item %3 
-        For later.
+    \item %3
+        For later
     \item %4  
         If no such path exists, the two odd vertics are on separate connected 
         components A and B. Consider A by itself, it is a connected graph, 
         but it has an odd number of vertices with an odd degree, a contradiction
         . 
     \item %5
+        Consider the following algorithm
+        \begin{algorithm}
+            \caption{Random Traversal}
+        \begin{algorithmic}[1]
+        \State i = 0
+        \State v = random vertex in G
+        \Repeat
+        \State Mark v with i
+        \State v = some vertex in N(v) that isn't marked
+        \State i += 1
+        \Until{all vertices in $N(v)$ is marked}
+        \end{algorithmic}
+        \end{algorithm}
         \begin{enumerate}[a)]
+            \item Consider the vertex $v$ that we end up after running this 
+                algorithm on $G$. The algorithm must have visited all vertices in
+                $N(v)$, and are marked with a number. We have a path from the 
+                lowest marked $u \in N(v)$ to $v$, and since $\delta(G) \geq k$, 
+                this path is of length at least $k$. 
             \item 
-                
-            \item 
+                Once again consider the path from the lowest marked $u
+                \in N(v)$ to $v$. This path in addition to the edge $uv$ 
+                creates a cycle, and by above the path is at least $k$ long, 
+                including $uv$ the cycle is at least $k+1$ long.
         \end{enumerate}
     \item %6
         We prove this by induction on the length of the odd closed walk. 
@@ -40,20 +62,44 @@
         If no vertices in the walk repeat, then we are done, the odd walk is an
         odd cycle. Otherwise, let $l$ be the smallest number not $1$ such that $v_l$ 
         repeats, and let $v_l = v_k$ where $l < k$. Then we have two closed walks 
-        in $W$, $v_1$, ..., $v_l = v_k$, ..., $v_{2n+1} = v_1$ and $v_l$, ..., 
-        $v_k = v_l$. The lengths of these two walks must add up to $2n+1$, thus one
-        of them must be an odd length closed walk, which by the inductive hypothesis
+        in $W$, $v_1$, ..., $v_l = v_k$, ..., $v_{2n+1} = v_1$ and $v_l$, ..., $v_k = v_l$. The lengths of these two walks must add up to $2n+1$, thus one of them must be an odd length closed walk, which by the inductive hypothesis
         must contain an odd length cycle. 
 
-
     \item %7
+        \begin{tikzpicture}
+            \node[shape=circle,draw=black] (A) at (0,0) {A};
+            \node[shape=circle,draw=black] (B) at (3,0) {B};
+            \node[shape=circle,draw=black] (C) at (-3,0) {C};
+            \node[shape=circle,draw=black] (D) at (0,1.5) {D};
+            \node[shape=circle,draw=black] (E) at (1.5,1.5) {E};
+            \node[shape=circle,draw=black] (F) at (-1.5,1.5) {F};
+            \node[shape=circle,draw=black] (G) at (0.75,-1.5) {G};
+            \node[shape=circle,draw=black] (H) at (-0.75,-1.5) {H};
+            \node[shape=circle,draw=black] (I) at (2,-1.5) {I};
+            \node[shape=circle,draw=black] (J) at (-2,-1.5) {J};
+
+            \path [-] (F) edge (D);
+            \path [-] (D) edge (E);
+            \path [-] (E) edge (B);
+            \path [-] (B) edge (I);
+            \path [-] (I) edge (G);
+            \path [-] (G) edge (H);
+            \path [-] (H) edge (J);
+            \path [-] (J) edge (C);
+            \path [-] (C) edge (F);
+
+            \path [-] (A) edge (E);
+            \path [-] (A) edge (G);
+            \path [-] (C) edge[bend right=20] (B);
+        \end{tikzpicture}
+
 
     \item %8
-        
+         
 
     \item %9
         My guess is that it is a complete graph $K_n$ with every edge to a single 
-        vertex missing, which has $\binom{n-1}{2} = \frac{(n-2)(n-1)}{2}$
+        vertex missing, which has $\binom{n-1}{2} = \frac{(n-2)(n-1)}{2}$ edges. 
 
     \item %10
         (Not sure whether this proof is legitimate/rigorous).
@@ -78,9 +124,54 @@
 
     \item %12
         \begin{enumerate}[a)]
-            \item 
-            \item 
             \item
+            \begin{tikzpicture}
+                \node[shape=circle,draw=black] (A) at (0,0) {A};
+                \node[shape=circle,draw=black] (B) at (2,0) {B};
+                \node[shape=circle,draw=black] (C) at (4,0) {C};
+                \node[shape=circle,draw=black] (D) at (0,2) {D};
+                \node[shape=circle,draw=black] (E) at (2,2) {E};
+                \node[shape=circle,draw=black] (F) at (4,2) {F};
+
+                \path [-] (A) edge (B);
+                \path [-] (B) edge (C);
+                \path [-] (D) edge (E);
+                \path [-] (E) edge (F);
+                \path [-] (A) edge (D);
+                \path [-] (B) edge (E);
+                \path [-] (C) edge (F);
+            \end{tikzpicture} 
+
+                This graph has no bridges and has more than one cycle.
+            \item 
+                We give a counter example of the contrapositive. 
+
+            \begin{tikzpicture}
+                \node[shape=circle,draw=black] (A) at (0,0) {A};
+                \node[shape=circle,draw=black] (B) at (2,0) {B};
+
+                \path [-] (A) edge (B);
+            \end{tikzpicture}
+                
+                This graph has a bridge, but no cut vertex. 
+
+            \item
+                \begin{tikzpicture}
+                \node[shape=circle,draw=black] (A) at (0,0) {A};
+                \node[shape=circle,draw=black] (B) at (2,1) {B};
+                \node[shape=circle,draw=black] (C) at (2,-1) {C};
+                \node[shape=circle,draw=black] (D) at (-2,1) {D};
+                \node[shape=circle,draw=black] (E) at (-2,-1) {E};
+
+                \path [-] (A) edge (B);
+                \path [-] (A) edge (C);
+                \path [-] (B) edge (C);
+                \path [-] (A) edge (D);
+                \path [-] (A) edge (E);
+                \path [-] (E) edge (D);
+                \end{tikzpicture}
+
+                This graph has no bridges and has $A$ as a cut vertex.
         \end{enumerate}
 
     \item %13
@@ -92,8 +183,36 @@
         no $xy$ path exists since if there was, this path in addition to 
         path $x$, $v$, $y$ would form a cycle in $G$. If $order = 2$, the graph does 
         not have a cycle. 
-    \item %16
+    \item %15
+        \begin{enumerate}[a)]
+            \item
+                Consider $v \in G$ such that $\delta(G) = |N(v)|$. Then 
+                $G - N(v)$ is a disconnected graph, thus $\kappa(G) \leq \delta(G)$.
+            \item
+                
+        \end{enumerate}
 
+    \item %16
+        \begin{enumerate}[a)]
+            \item
+                Suppose $\delta(G) \geq \frac{n-1}{2}$ but $G$ was not connected.
+                Then it must have more than one connected component. The smallest
+                connected component has $\leq n/2$ vertices, implying that 
+                $\delta(G) < \frac{n-1}{2}$, a contradiction. 
+            \item
+            \begin{tikzpicture}
+                \node[shape=circle,draw=black] (A) at (0,0) {A};
+                \node[shape=circle,draw=black] (B) at (1,0) {B};
+                \node[shape=circle,draw=black] (C) at (2,0) {C};
+                \node[shape=circle,draw=black] (D) at (3,0) {D};
+
+                \path [-] (A) edge (B);
+                \path [-] (C) edge (D);
+            \end{tikzpicture}
+
+            $|V(G)| = 4$, $\delta(G) = 1 \geq \frac{4 - 2}{2} = 1$ and $G$ is 
+            not connected. 
+        \end{enumerate}
 
 \end{enumerate}
 \end{document}
