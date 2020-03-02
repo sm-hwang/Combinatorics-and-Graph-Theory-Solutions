@@ -1,0 +1,16 @@
+6. Is in fact false, since a graph of order n with no edges has \alpha(G) = n > n / 2 
+So G was connected
+consider I = max independent set, and G - I, |I| = \alpha. if deg of one vertex is k, we have k * \alpha edges from I to G - I, but istributing but 
+k * alpha / |G - I| < k since |G - I| < alpha
+
+10. a) G - S, consider hamiltonian cycle, a_1, ..., a_n. this cycle - S has at most S gaps, so at most |S| connected components. 
+b) has at most |S|+1 gaps, so |S|+1 connected components. 
+
+12.
+a) abs(n_1 - n_2) <= 1
+b) same as above and min(n_1, n_2) >= 2
+
+13.
+a) 
+b)
+

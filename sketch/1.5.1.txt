@@ -1,0 +1,16 @@
+1.
+
+2. 
+
+3. 
+
+4. Induction on order of Tree, use neighbouhoods of a node not containing any edges.
+
+5. 
+
+6. if e is an edge, it is not part of any cycle, thus can't be a boundary. 
+
+7.
+
+8. Consider trees. 
+
