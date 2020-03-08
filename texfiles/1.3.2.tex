@@ -7,16 +7,10 @@
 {\bfseries Section 1.3.2}
 
 \begin{enumerate}[1]
-    \item
-        \begin{enumerate}[a)]
-            \item 
-            \item
-            \item
-            \item
-            \item
-        \end{enumerate}
-    \item
-        If $T$ has order $n$, it has $n - 1$ edges. Having an even number of edges 
+    \addtocounter{enumi}{1}
+    \item 
+        If $T$ has order $n$, it has $n - 1$ edges. Having an even number of 
+        edges 
         then implies that there are an odd number of vertices. If all the degrees 
         of the vertices were odd, then the sum of an odd number of odd numbers is
         odd, which contradicts that $\sum_{v \in V(T)} deg(v) = 2|E(T)|$.
@@ -27,15 +21,87 @@
         order greater than $1$. These trees have at least $2$ leaves, with at most 
         one created from the deletion of $v$. Thus $T$ has at least $\delta$ leaves.
     \item
+        Each of the $k$ connected components must be a tree with $n_i$ vertices 
+        such that $n = n_1 + ... + n_k$. By theorem 1.10, we have that the trees 
+        have $n_1 - 1$, $n_2 - 1$, ..., $n_k - 1$ edges, and the forest has 
+        $(n_1 - 1) + ... + (n_k - 1) = n - k$ edges.
+    \item %5
+        $\Rightarrow$ Let $G$ be a tree, and suppose more than one $xy$ path
+        exists in $G$ for $x,y \in V(G)$. We label them 
+        $P_v = v_1 (= x), ..., v_k (= y)$, 
+        $P_u = u_1 (= x), ..., u_m (= y)$. Let $i_1, i_2$ be the 
+        smallest indices such that $v_{i_1 + 1} \neq u_{i_2 + 1}$, and $j_1, j_2$ 
+        be smallest indices with $i_1 < j_1$ and $i_2 < j_2$ such that 
+        $v_{j_1} = u_{j_2}$. Then $G$ contains the cycle
+        $v_{i_1}, ..., v_{j_1} = u_{j_2}, u_{j_2 - 1}, ..., u_{i_2} = v_{i_1}$. 
         
-    \item
+        $\Leftarrow$ Let $G$ be a graph such that $\forall u,v \in V(G)$, there 
+        is exactly one $uv$ path. To show a contradiction, suppose $G$ contains 
+        a cycle $v_1, ..., v_k, v_1$. Then there are two paths from $v_1$ to 
+        $v_k$, namely $v_1, ..., v_k$, and $v_1, v_k$. 
 
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
+    \item %6
+        INCOMPLETE
+
+        $\Rightarrow$ Let $T$ be a tree. By definition, $T$ does not contain 
+        any cycles. Let $u,v \in V(T)$ such that $uv \notin E(T)$. Since $T$
+        is connected, there is a $u$ to $v$ path forms a cycle with $uv$ in 
+        $T + uv$. 
+        % Now suppose more than one cycle exists in $T + uv$. Since
+        % there are no cycles in $T$, all the cycles must contain $uv$. Consider
+        % two such cycles, $C_w = w_1, ..., u, v, ..., w_k, w_1$ and 
+        % $C_q = q_1, ..., u, v, ..., q_m, q_1$. But then 
+        % $u, ..., q_1, q_m, ..., v,$
+
+        $\Leftarrow$ 
+        
+    \item %7
+        Suppose $u, v \in V(T)$ such that $uv$ is not a bridge in $T$. Then in 
+        $T - uv$, there exists a $uv$ path, but this $uv$ path $+ uv$ forms a 
+        cycle in $T$, which is a contradiction. 
+    \item %8
+        Consider a nonleaf vertex $v \in V(T)$, where $T$ is a tree. There exists
+        $x, y \in V(T)$ such that $xv, yv \in E(T)$. If $v$ wasn't a cut vertex,
+        $T - v$ contains a $xy$ path, but this path with $xv$ and $yv$ forms a
+        cycle in $T$, contradicting that $T$ is a tree.
+
+    \item %9 
+        Consider the longest path $P = v_1, ..., v_k$ in $T$. We show that 
+        the end vertices of this path must be leaves. Wlog, suppose $v_1$ 
+        is not a leaf. Then either $v_1v_i \in E(T)$ where $i \neq 2$, or 
+        $\exists x \in V(T)$ such that $x \notin P$. In the first case,
+        $v_1, ..., v_i, v_1$ is a cycle in $T$. In the second case, 
+        $x, v_1, ..., v_k$ is a longer path in $T$. Both cases lead to 
+        contradictions, meaning that $v_1, v_k$ are leaves, and every tree
+        has at least two leaves. 
+        
+    \item %10
+        We induct on the order of $T$.
+
+        Tree of order $2$ is $K_2$, which has $2$ leaves. 
+
+        Suppose this was true for a tree with $2 < k$ vertices, and consider 
+        a tree $T$ with $k + 1$ vertices. From above, we know that it has at 
+        least two leaves, and let $u$ be a leaf, with $uv \in E(T)$. 
+        $T - u$ has $k$ leaves, and satisfies the formula. In $T - u$, either
+        $deg(v) = 1$ or $deg(v) > 1$. In the first case, $v$ is a leaf in $T$
+        and $T$ has the same number of leaves and the same number of vertices
+        with degree $\geq 3$, and the formula still holds. In the second case,
+        $deg(v)$ is greater by $1$ in $T$, and $u$ is a new leaf, so the number 
+        of leaves in $T$ is greater by $1$ compared to the number of leaves in 
+        $T - u$. Thus the formula holds for all trees. 
+
+    \item %11
+        Let $|V(T)| = n$. We know that $\frac{\sum_{v \in V(G)} deg(v)}{|V(G)|} 
+        = 2|E| = 2(n - 1)$, which yields
+        $$ a = \frac{2(n-1)}{n} \Rightarrow n = \frac{2}{2-a}$$ 
+
+    \item %12
+        Let $T$ be a tree such that every vertex adjacent to a leaf has degree
+        at least $3$, and suppose no pairs of leaves has a common neighbour. 
+        Let $k$ be the number of nodes that neighbour a leaf. Then,
+        $$2(n-1) = \sum_{v \in V(T)} deg(v) \geq k + 3k + 2(n-2k) = 2n$$
+
+
 \end{enumerate}
 \end{document}
