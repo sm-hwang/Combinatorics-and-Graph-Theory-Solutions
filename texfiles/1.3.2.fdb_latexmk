@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1583626620 "1.3.2.tex" "1.3.2.pdf" "1.3.2" 1583626620
+["pdflatex"] 1583634974 "1.3.2.tex" "1.3.2.pdf" "1.3.2" 1583634984
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc" 1480098668 3341 78e600b269762aa2a25a5293cc4535c0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc" 1480098668 3275 8d7166dfdbc31ffdc8aba0c31b3bd5c8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc" 1480098668 3375 808c88761dbdc66fc653d18f42765b64 ""
@@ -89,9 +89,9 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "1.3.2.aux" 1583626620 8 a94a2480d3289e625eea47cd1b285758 ""
-  "1.3.2.tex" 1583626614 5257 dbee47ec161d811975ea9e1692d4d341 ""
+  "1.3.2.aux" 1583634975 8 a94a2480d3289e625eea47cd1b285758 ""
+  "1.3.2.tex" 1583634974 5792 ad7b4c080fde95fca6c09fc8ddbe94ff ""
   (generated)
-  "1.3.2.pdf"
   "1.3.2.log"
   "1.3.2.aux"
+  "1.3.2.pdf"

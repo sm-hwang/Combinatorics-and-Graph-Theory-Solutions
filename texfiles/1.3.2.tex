@@ -41,19 +41,22 @@
         $v_k$, namely $v_1, ..., v_k$, and $v_1, v_k$. 
 
     \item %6
-        INCOMPLETE
-
         $\Rightarrow$ Let $T$ be a tree. By definition, $T$ does not contain 
         any cycles. Let $u,v \in V(T)$ such that $uv \notin E(T)$. Since $T$
-        is connected, there is a $u$ to $v$ path forms a cycle with $uv$ in 
-        $T + uv$. 
-        % Now suppose more than one cycle exists in $T + uv$. Since
-        % there are no cycles in $T$, all the cycles must contain $uv$. Consider
-        % two such cycles, $C_w = w_1, ..., u, v, ..., w_k, w_1$ and 
-        % $C_q = q_1, ..., u, v, ..., q_m, q_1$. But then 
-        % $u, ..., q_1, q_m, ..., v,$
+        is connected, there is a $u$ to $v$ path that forms a cycle with $uv$ in 
+        $T + uv$. Now suppose more than one cycle exists in $T + uv$. Since
+        there are no cycles in $T$, all the cycles must contain $uv$. Consider
+        two such cycles, $C_w = w_1 (= u), w_2, ..., w_k (= v), u$ and 
+        $C_q = q_1 (= u), q_2, ..., q_m (= v), u$. (Fill in the argument that
+        this implies that G contains a cyclce) 
 
-        $\Leftarrow$ 
+        $\Leftarrow$ Let $T$ be a graph that contains no cycles, and for 
+        any new edge $e$, the graph $T + e$ has exactly one cycle. We want to
+        show $T$ is connected. Consider $u, v \in V(T)$ such that $v \neq u$ and 
+        $uv \notin E(T)$. $G + uv$ contains exactly one cycle, while $G$ did not
+        , so the introduced cycle is $C = u, ..., v, u, ..., v$. Explicitly, 
+        there exists a $u$ to $v$ path that does not use $uv$, and this path is 
+        in $G$. Thus $G$ is connected and acyclic, implying that it is a tree. 
         
     \item %7
         Suppose $u, v \in V(T)$ such that $uv$ is not a bridge in $T$. Then in 
