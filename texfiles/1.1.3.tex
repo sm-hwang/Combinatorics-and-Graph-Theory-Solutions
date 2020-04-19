@@ -22,9 +22,15 @@
         graph, $3$ in $X$ and $1$ in $Y$ would result in a edges between the 
         single vertex in a partition set to the other three, and $2$ in $X$ 
         and $2$ in $Y$ induces a graph with a cycle.
-    \item %5
-        
+    \addtocounter{enumi}{1}
     \item %6
+        $$\text{ order } = \sum_{i = 1}^{k} r_i$$
+        We use $\sum deg(v) = 2|E|$ to solve for size. 
+        For $v \in A_i$, $deg(v) = \sum_{j = 1}^{k} r_j - r_i$. All vertices
+        of $A_i$ have the same degree, thus $r_i(\sum_{j = 1}^{k} r_j - r_i)$ 
+        is the sum of degrees of vertices in $A_i$, thus 
+        $$ \text{size } = \sum_{i = 1}^{k} [r_j(\sum_{j = 1}^{k} r_j - r_i) ]$$
+        
         
     \item %7
         For part c), we have $order = m$, $size = \sum^{n}_{i=1} 
