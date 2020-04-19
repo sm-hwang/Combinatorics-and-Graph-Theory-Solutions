@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1583633589 "1.3.3.tex" "1.3.3.pdf" "1.3.3" 1583633590
+["pdflatex"] 1587332708 "1.3.3.tex" "1.3.3.pdf" "1.3.3" 1587332709
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc" 1480098668 3341 78e600b269762aa2a25a5293cc4535c0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc" 1480098668 3275 8d7166dfdbc31ffdc8aba0c31b3bd5c8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc" 1480098668 3375 808c88761dbdc66fc653d18f42765b64 ""
@@ -37,6 +37,7 @@
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1480098733 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1480098733 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1480098733 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1480098733 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb" 1480098742 230551 5ba6b427b352fee1ec24cb4d22d70733 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol8.pfb" 1480098742 228273 1b9652077d8f9fdc99f210b93860040b ""
   "/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1480098806 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -83,9 +84,9 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "1.3.3.aux" 1583633590 8 a94a2480d3289e625eea47cd1b285758 ""
-  "1.3.3.tex" 1583633587 2394 47d3d51cacf3fb457aeac26d2c95e09d ""
+  "1.3.3.aux" 1587332709 8 a94a2480d3289e625eea47cd1b285758 ""
+  "1.3.3.tex" 1587332706 2762 07a5308cd51d10e9f3e26d40ebf8a1eb ""
   (generated)
-  "1.3.3.pdf"
-  "1.3.3.log"
   "1.3.3.aux"
+  "1.3.3.log"
+  "1.3.3.pdf"
